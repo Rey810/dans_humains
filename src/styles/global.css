@@ -1,0 +1,71 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+:root {
+  /* COLOURS */
+  --primary-1: #0099a1;
+  --primary-2: #f1de68;
+  --primary-dark: #111111;
+  --primary-light: #ffffff;
+  --secondary-1: #828282;
+
+  /* Backgrounds */
+  --background-color-1: var(--primary-1);
+  --background-color-2: var(--primary-2);
+  --background-color-dark: var(--primary-dark);
+  --background-color-light: var(--primary-light);
+
+  /* Buttons */
+  --button-primary-1-standard: 3px solid var(--primary-1);
+  --button-primary-1-hover: var(--primary-1);
+  --button-primary-2-standard: 3px solid var(--primary-2);
+  --button-primary-2-hover: var(--primary-2);
+
+  /* Button States (PRIMARY-1)*/
+  --button-primary-1-border-medium: var(--button-primary-1-standard);
+  --button-primary-1-bg-solid: var(--button-primary-1-hover);
+  /* Button States (PRIMARY-2)*/
+  --button-primary-2-border-medium: var(--button-primary-2-standard);
+  --button-primary-2-bg-solid: var(--button-primary-2-hover);
+
+  /* Button States (inactive button) */
+  --button-inactive-border: var(--secondary-1);
+  --button-inactive-bg: var(--secondary-1);
+}
+
+/* Buttons */
+.btn {
+  @apply px-6;
+  @apply py-2;
+}
+
+.btn__PRIMARY-1 {
+  border: var(--button-primary-1-border-medium);
+}
+
+.btn__PRIMARY-1:hover,
+.btn__PRIMARY-1:active {
+  background-color: var(--button-primary-1-bg-solid);
+}
+
+.btn__PRIMARY-1:inactive {
+  color: var(--button-inactive-bg);
+  background-color: var(--button-inactive-bg);
+}
+
+.btn__PRIMARY-2 {
+  border: var(--button-primary-2-border-medium);
+}
+
+.btn__PRIMARY-2:hover,
+.btn__PRIMARY-2:active {
+  background-color: var(--button-primary-2-bg-solid);
+}
+
+.btn__PRIMARY-2:inactive {
+  color: var(--button-inactive-bg);
+  background-color: var(--button-inactive-bg);
+}
