@@ -1,15 +1,12 @@
 import React from "react"
-import Layout from "../components/containers/layout"
+import Layout from "../containers/layout"
+import Toolbar from "../components/Navigation/Toolbar/Toolbar"
 
 const home = () => {
   return (
     <Layout>
-      <header>
-        {/* Needs to be responsive */}
-        <nav>
-          <li>Ham Icon</li>
-        </nav>
-      </header>
+      {/* Needs to be responsive */}
+      <Toolbar />
       {/* Landing Section */}
       <main>
         <h1>Dans Humains</h1>
