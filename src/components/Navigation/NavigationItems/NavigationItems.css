@@ -1,0 +1,4 @@
+.nav-container__desktop {
+  @apply flex;
+  @apply justify-center;
+}

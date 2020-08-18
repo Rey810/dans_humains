@@ -1,3 +1,14 @@
+/* Menu Toggle icon container */
+.mobile-only {
+  @apply flex;
+  @apply w-full;
+  @apply justify-end;
+}
+
+.mobile-only button {
+  @apply w-8;
+}
+
 @media (min-width: 500px) {
   .mobile-only {
     display: none;
