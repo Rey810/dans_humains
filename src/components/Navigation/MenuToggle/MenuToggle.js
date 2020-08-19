@@ -1,9 +1,9 @@
 import React from "react"
 import "./MenuToggle.css"
 
-const menuToggle = () => {
+const MenuToggle = props => {
   return (
-    <div className="mobile-only">
+    <div className="menu-toggle mobile-only">
       <button type="button" aria-label="menu toggle">
         <svg
           aria-hidden="true"
@@ -57,4 +57,4 @@ const menuToggle = () => {
   )
 }
 
-export default menuToggle
+export default MenuToggle

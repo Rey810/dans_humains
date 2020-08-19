@@ -3,7 +3,7 @@ import MenuToggle from "../MenuToggle/MenuToggle"
 import NavigationItems from "../NavigationItems/NavigationItems"
 import "./Toolbar.css"
 
-const toolbar = () => {
+const Toolbar = props => {
   return (
     <header>
       {/* Menu Toggle displayed on <500px displays */}
@@ -16,4 +16,4 @@ const toolbar = () => {
   )
 }
 
-export default toolbar
+export default Toolbar
