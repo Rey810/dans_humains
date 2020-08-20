@@ -1,8 +1,17 @@
-.menu {
+@import "../../../styles/global.css";
+
+.Menu {
   position: absolute;
   top: 0;
-  background-color: red;
+  background-color: var(--primary-light);
+  height: 100%;
+  width: 100%;
 }
 
 .Open {
+  left: 0;
+}
+
+.Closed {
+  left: -9999px;
 }

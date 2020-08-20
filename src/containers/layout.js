@@ -4,20 +4,23 @@ import Menu from "../components/Navigation/Menu/menu"
 import menuToggle from "../components/Navigation/MenuToggle/MenuToggle"
 
 const Layout = ({ children }) => {
-  const { showMenu, setShowMenu } = useState(false)
+  // array destructuring: 1st value returned by useState is assigned to showMenu, 2nd value is assigned to setShowMenu
+  const [showMenu, setShowMenu] = useState(false)
 
-  // const menuClosedHandler = () => setshowMenu(false)
+  const menuToggleHandler = () => {
+    console.log("clicked!")
+    setShowMenu(!showMenu)
+  }
 
-  // const menuToggleHandler = () => {
-  //   console.log("clicked!")
-  //   setShowMenu(!showMenu)
-  // }
+  const menuCloseHandler = () => {
+    setShowMenu(false)
+  }
 
   return (
     <>
       {/* Needs to be responsive */}
-      {/* <Toolbar open={menuToggleHandler} /> */}
-      <Menu />
+      <Toolbar toggle={menuToggleHandler} />
+      <Menu open={showMenu} closeMenu={menuCloseHandler} />
       <div>{children}</div>
     </>
   )

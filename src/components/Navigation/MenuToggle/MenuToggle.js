@@ -2,9 +2,11 @@ import React from "react"
 import "./MenuToggle.css"
 
 const MenuToggle = props => {
+  // from Toolbar
+  const { toggled } = props
   return (
     <div className="menu-toggle mobile-only">
-      <button type="button" aria-label="menu toggle">
+      <button type="button" aria-label="menu toggle" onClick={toggled}>
         <svg
           aria-hidden="true"
           version="1.1"

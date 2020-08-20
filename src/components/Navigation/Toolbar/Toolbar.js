@@ -4,10 +4,12 @@ import NavigationItems from "../NavigationItems/NavigationItems"
 import "./Toolbar.css"
 
 const Toolbar = props => {
+  // from Layout
+  const { toggle } = props
   return (
     <header>
       {/* Menu Toggle displayed on <500px displays */}
-      <MenuToggle />
+      <MenuToggle toggled={toggle} />
       {/* Desktop Only displayed on >=500px displays */}
       <nav className="desktop-only">
         <NavigationItems />

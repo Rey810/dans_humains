@@ -78,6 +78,6 @@
 /* MEDIA QUERIES */
 @media (min-width: 500px) {
   .mobile-only {
-    display: none;
+    display: none !important;
   }
 }
