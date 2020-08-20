@@ -34,6 +34,8 @@
   /* Button States (inactive button) */
   --button-inactive-border: var(--secondary-1);
   --button-inactive-bg: var(--secondary-1);
+
+  /* FONTS */
 }
 
 /* Buttons */
@@ -71,9 +73,15 @@
 }
 
 /* General Elements */
-/* header {
-  
-} */
+header {
+  position: absolute;
+  width: 100%;
+}
+
+h1 {
+  /*  2.5rem */
+  @apply text-4xl xl:text-7xl;
+}
 
 /* MEDIA QUERIES */
 @media (min-width: 500px) {

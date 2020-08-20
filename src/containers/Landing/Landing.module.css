@@ -1,0 +1,5 @@
+.Landing {
+  min-height: -webkit-fill-available;
+  min-height: 100vh;
+  background-color: rgb(55, 55, 175);
+}
