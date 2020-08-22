@@ -1,0 +1,29 @@
+.Form input {
+  @apply block;
+  border: 3px solid var(--primary-light);
+  @apply p-4;
+  @apply mb-4;
+}
+
+.Form textarea {
+  @apply block;
+  border: 3px solid var(--primary-light);
+  @apply px-4 py-3;
+  @apply mb-4;
+}
+
+.Form input::placeholder,
+.Form textarea::placeholder {
+  color: var(--primary-light);
+}
+
+.Form input,
+.Form textarea,
+.Form label {
+  color: var(--primary-light);
+}
+
+.Form label {
+  @apply block;
+  @apply mb-2;
+}

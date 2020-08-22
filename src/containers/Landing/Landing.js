@@ -4,7 +4,7 @@ import classes from "./Landing.module.css"
 const Landing = () => {
   return (
     <main className={classes.Landing}>
-      <h1 classesName={classes.LandingHeader}>Dans Humains</h1>
+      <h1 className={classes.LandingHeader}>Dans Humains</h1>
       <p>
         We believe in the healing power of arts because art is about sharing who
         we are. We find strength in pain - in other words, we use pain as the

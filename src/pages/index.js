@@ -1,6 +1,9 @@
 import React from "react"
 import Layout from "../containers/Layout"
 import Landing from "../containers/Landing/Landing"
+import Projects from "../containers/Projects/Projects"
+import Form from "../components/UI/Form/Form"
+import Button from "../components/UI/Button/Button"
 
 const home = () => {
   return (
@@ -8,14 +11,14 @@ const home = () => {
       {/* Landing Section */}
       <Landing />
       {/* Needs to be responsive */}
-      <blockquote>
+      {/* <blockquote>
         <p>
           Humane - marked by compassion and sympathy; treating all beings as
           humans worthy of your empathy.
         </p>
-      </blockquote>
+      </blockquote> */}
       {/* Values and Beliefs Section */}
-      <section>
+      <section className="values-beliefs-container">
         <h2>Values & Beliefs</h2>
         <ul>
           <ol>
@@ -32,17 +35,14 @@ const home = () => {
           </ol>
         </ul>
       </section>
-      <section>
+      <section className="latest-projects-container">
         <h2>Latest Projects</h2>
-        <div>
-          <div>Project Card</div>
-          <div>Project Card</div>
-          <div>Project Card</div>
-          <div>Project Card</div>
-        </div>
-        <a href="/">See More</a>
+        <Projects />
+        <Button type="link" btnStyle="PRIMARY_1">
+          See More
+        </Button>
       </section>
-      <section>
+      <section className="about-container">
         <h2>Who We Are</h2>
         <p>
           Dans Humains is a female artists' collective that brings to fruition a
@@ -50,21 +50,14 @@ const home = () => {
           global activism. We produce work independently and collectively; we
           use art as a medium through which to address a wide range of issues.
         </p>
-        <a href="/">MORE</a>
+        <Button type="link" btnStyle="PRIMARY_1">
+          MORE
+        </Button>
       </section>
-      <section>
+      <section className="form-container">
         <h2>Contact Us</h2>
-        <form action="/">
-          <input type="text" placeholder="Name" />
-          <input type="email" placeholder="E-mail" />
-          <textarea
-            name="question"
-            id="question"
-            cols="30"
-            rows="10"
-          ></textarea>
-          <button className="btn btn__PRIMARY-2">SEND</button>
-        </form>
+        {/* FORM */}
+        <Form />
       </section>
     </Layout>
   )

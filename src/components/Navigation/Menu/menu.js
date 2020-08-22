@@ -11,7 +11,7 @@ const menu = props => {
   }
 
   return (
-    <div class={attachedClasses.join(" ")}>
+    <div className={attachedClasses.join(" ")}>
       <h1>Menu</h1>
       <button type="button" aria-label="close menu" onClick={closeMenu}>
         <svg

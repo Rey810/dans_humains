@@ -1,0 +1,35 @@
+.Card {
+  /* 320px */
+  height: 20rem;
+  /* 240px */
+  width: 15rem;
+  /* Prevents cards growing or shrinking within flex container */
+  @apply flex-shrink-0 flex-grow-0;
+  @apply p-2;
+}
+
+.Card h3 {
+  @apply text-xl lg:text-2xl;
+}
+
+.ImgContainer {
+  @apply h-2/3;
+}
+
+.ImgContainer img {
+  height: 100%;
+  @apply bg-gray-500;
+}
+
+.Card p {
+  @apply py-2 text-sm lg:text-base;
+}
+
+@media (min-width: 1027px) {
+  .Card {
+    /* 400px */
+    height: 25rem;
+    /* 288px */
+    width: 18rem;
+  }
+}

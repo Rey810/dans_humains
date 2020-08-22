@@ -20,17 +20,21 @@
 
   /* Buttons */
   --button-primary-1-standard: 3px solid var(--primary-1);
-  --button-primary-1-hover: var(--primary-1);
   --button-primary-2-standard: 3px solid var(--primary-2);
-  --button-primary-2-hover: var(--primary-2);
+  --button-form-standard: 3px solid var(--primary-light);
 
   /* Button States (PRIMARY-1)*/
   --button-primary-1-border-medium: var(--button-primary-1-standard);
   --button-primary-1-bg-solid: var(--button-primary-1-hover);
+  --button-primary-1-hover: var(--primary-1);
   /* Button States (PRIMARY-2)*/
   --button-primary-2-border-medium: var(--button-primary-2-standard);
   --button-primary-2-bg-solid: var(--button-primary-2-hover);
-
+  --button-primary-2-hover: var(--primary-2);
+  /* Button States (Form) */
+  --button-form-border-medium: var(--button-form-standard);
+  --button-form-bg-solid: var(--primary-2);
+  --button-form-hover: var(--primary-1);
   /* Button States (inactive button) */
   --button-inactive-border: var(--secondary-1);
   --button-inactive-bg: var(--secondary-1);
@@ -38,49 +42,78 @@
   /* FONTS */
 }
 
-/* Buttons */
-.btn {
-  @apply px-6;
-  @apply py-2;
-}
-
-.btn__PRIMARY-1 {
-  border: var(--button-primary-1-border-medium);
-}
-
-.btn__PRIMARY-1:hover,
-.btn__PRIMARY-1:active {
-  background-color: var(--button-primary-1-bg-solid);
-}
-
-.btn__PRIMARY-1:inactive {
-  color: var(--button-inactive-bg);
-  background-color: var(--button-inactive-bg);
-}
-
-.btn__PRIMARY-2 {
-  border: var(--button-primary-2-border-medium);
-}
-
-.btn__PRIMARY-2:hover,
-.btn__PRIMARY-2:active {
-  background-color: var(--button-primary-2-bg-solid);
-}
-
-.btn__PRIMARY-2:inactive {
-  color: var(--button-inactive-bg);
-  background-color: var(--button-inactive-bg);
-}
-
 /* General Elements */
+html {
+  font-family: Roboto;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+h1,
+h2 {
+  /* Only has one weight and style: 400 Regular */
+  font-family: Righteous;
+}
 header {
   position: absolute;
   width: 100%;
 }
 
-h1 {
+p {
+  @apply text-sm lg:text-xl;
+  @apply font-light;
+}
+
+li {
+  @apply text-xl;
+  @apply font-light;
+}
+
+h1,
+h2 {
   /*  2.5rem, 5rem */
   @apply text-4xl lg:text-7xl;
+  @apply mb-6 lg:mb-8;
+}
+
+input,
+textarea {
+  background-color: transparent;
+}
+
+/* Sections */
+section {
+  @apply pt-16 lg:pt-20;
+}
+.projects-container {
+  @apply flex;
+  @apply flex-no-wrap;
+  @apply overflow-x-auto;
+}
+
+.values-beliefs-container {
+  background-color: var(--primary-1);
+}
+
+.latest-projects-container {
+  background-color: var(--primary-2);
+}
+
+.about-container {
+  background-color: var(--primary-light);
+}
+
+.form-container {
+  background-color: var(--primary-dark);
+}
+
+.form-container h2 {
+  color: var(--primary-light);
 }
 
 /* MEDIA QUERIES */
