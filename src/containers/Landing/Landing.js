@@ -17,14 +17,6 @@ const Landing = () => {
             <ChevronDown />
           </nav>
         </div>
-        <div className="mx-auto lg:w-4/5 xl:w-2/3">
-          <blockquote>
-            <p>
-              <strong>Humane</strong> - marked by compassion, sympathy and
-              consideration for others.
-            </p>
-          </blockquote>
-        </div>
       </div>
     </div>
   )

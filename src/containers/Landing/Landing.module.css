@@ -26,8 +26,8 @@
   }
 }
 
-.Landing h1 {
-  @apply inline-block;
+.LandingHeader {
+  @apply inline-block xl:text-9xl;
 }
 
 .Landing blockquote {
