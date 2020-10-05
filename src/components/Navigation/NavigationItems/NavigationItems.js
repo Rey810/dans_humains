@@ -4,9 +4,9 @@ import "./NavigationItems.css"
 const navigationItems = () => {
   return (
     <ol className="nav-container__desktop">
-      <li>About</li>
-      <li>Services</li>
-      <li>Contact</li>
+      <li>Latest Projects</li>
+      <li>Who We Are</li>
+      <li>Contact Us</li>
     </ol>
   )
 }

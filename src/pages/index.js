@@ -59,6 +59,14 @@ const home = () => {
         {/* FORM */}
         <Form />
       </section>
+      <section className="partners-container">
+        <h2>Partners</h2>
+        <div className="partners">
+          <div className="partner">Partner 1</div>
+          <div className="partner">Partner 2</div>
+          <div className="partner">Partner 3</div>
+        </div>
+      </section>
     </Layout>
   )
 }

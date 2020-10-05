@@ -40,6 +40,11 @@
   --button-inactive-bg: var(--secondary-1);
 
   /* FONTS */
+  --hero-font-color: var(--primary-light);
+  --toolbar-font-color: var(--primary-light);
+
+  /* BORDERS */
+  --light-border-color: var(--primary-light);
 }
 
 /* General Elements */
@@ -60,12 +65,12 @@ h2 {
   font-family: Righteous;
 }
 header {
-  position: absolute;
-  width: 100%;
+  @apply pt-6 xl:pt-8 absolute w-full;
+  color: var(--toolbar-font-color);
 }
 
 p {
-  @apply text-sm lg:text-xl;
+  @apply text-sm lg:text-lg;
   @apply font-light;
 }
 
@@ -86,10 +91,16 @@ textarea {
   background-color: transparent;
 }
 
+/* Nav Sections (Mobile and Desktop) */
+nav li {
+  @apply mx-4 text-xs xl:text-sm;
+}
+
 /* Sections */
 section {
   @apply pt-16 lg:pt-20;
 }
+
 .projects-container {
   @apply flex;
   @apply flex-no-wrap;

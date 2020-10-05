@@ -1,7 +1,6 @@
 /* Buttons */
 .Button {
-  @apply px-6;
-  @apply py-2;
+  @apply px-6 py-2 inline-block;
 }
 
 .PRIMARY_1 {

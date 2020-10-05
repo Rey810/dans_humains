@@ -1,5 +1,40 @@
 .Landing {
   min-height: -webkit-fill-available;
   min-height: 100vh;
-  background-color: rgb(55, 55, 175);
+  background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.57) 0%,
+      rgba(0, 0, 0, 0.57) 0%
+    ),
+    url("../../assets/images/landing__hero.jpg");
+  background-size: cover;
+  @apply px-24;
+  @apply flex items-center;
+}
+
+.Landing > * {
+  color: var(--hero-font-color);
+}
+
+@supports (width: min-content) {
+  .Landing div div:first-child {
+    width: min-content;
+  }
+
+  .Landing p {
+    width: auto;
+  }
+}
+
+.Landing h1 {
+  @apply inline-block;
+}
+
+.Landing blockquote {
+  @apply px-12 py-8 rounded-lg;
+  border: 1px solid var(--light-border-color);
+}
+
+.Landing blockquote p {
+  @apply text-sm lg:text-base;
 }
