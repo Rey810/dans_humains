@@ -86,6 +86,10 @@ h2 {
   @apply mb-6 lg:mb-8;
 }
 
+h2 {
+  @apply text-center;
+}
+
 input,
 textarea {
   background-color: transparent;
@@ -99,6 +103,10 @@ nav li {
 /* Sections */
 section {
   @apply pt-16 lg:pt-20;
+}
+
+.section-children-container {
+  @apply p-8;
 }
 
 .projects-container {
