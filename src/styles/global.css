@@ -10,7 +10,16 @@
   --primary-2: #f1de68;
   --primary-dark: #111111;
   --primary-light: #ffffff;
+  --primary-light-bleed: hsla(0, 0%, 100%, 0.75);
   --secondary-1: #828282;
+
+  /* FORM COLOURS */
+  --placeholder-color: var(--primary-light-bleed);
+
+  /*  STATUS COLOURS  */
+  --error-color: #ff3366;
+  --default-color: #d6edff;
+  --success-color: #81e979;
 
   /* Backgrounds */
   --background-color-1: var(--primary-1);
@@ -106,7 +115,7 @@ section {
 }
 
 .section-children-container {
-  @apply p-8;
+  @apply p-8 flex justify-center items-center;
 }
 
 .projects-container {
@@ -141,3 +150,5 @@ section {
     display: none !important;
   }
 }
+
+@import "./contact_form.css";

@@ -8,16 +8,7 @@ import Button from "../components/UI/Button/Button"
 const home = () => {
   return (
     <Layout>
-      {/* Landing Section */}
       <Landing />
-      {/* Needs to be responsive */}
-      {/* <blockquote>
-        <p>
-          Humane - marked by compassion and sympathy; treating all beings as
-          humans worthy of your empathy.
-        </p>
-      </blockquote> */}
-      {/* Values and Beliefs Section */}
       <section className="values-beliefs-container">
         <h2>Values & Beliefs</h2>
         <div className="section-children-container">
@@ -58,7 +49,6 @@ const home = () => {
       <section className="form-container">
         <h2>Contact Us</h2>
         <div className="section-children-container">
-          {/* FORM */}
           <Form />
         </div>
       </section>
