@@ -8,9 +8,11 @@
   /* COLOURS */
   --primary-1: #0099a1;
   --primary-2: #f1de68;
-  --primary-dark: #111111;
+  --primary-dark: rgb(18, 18, 18);
+  --primary-medium: #333333;
   --primary-light: #ffffff;
-  --primary-light-bleed: hsla(0, 0%, 100%, 0.75);
+  --primary-dark-bleed: rgba(18, 18, 18, 0.85);
+  --primary-light-bleed: hsla(0, 0%, 100%, 0.8);
   --secondary-1: #828282;
 
   /* FORM COLOURS */
@@ -24,8 +26,10 @@
   /* Backgrounds */
   --background-color-1: var(--primary-1);
   --background-color-2: var(--primary-2);
+  --background-color-3: var(--primary-medium);
   --background-color-dark: var(--primary-dark);
   --background-color-light: var(--primary-light);
+  --background-color-light-bleed: var(--primary-light-bleed);
 
   /* Buttons */
   --button-primary-1-standard: 3px solid var(--primary-1);
@@ -51,6 +55,7 @@
   /* FONTS */
   --hero-font-color: var(--primary-light);
   --toolbar-font-color: var(--primary-light);
+  --heading-font-color: var(--primary-dark-bleed);
 
   /* BORDERS */
   --light-border-color: var(--primary-light);
@@ -65,6 +70,7 @@ html {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+    color: var(--primary-dark-bleed);
   }
 }
 
@@ -111,17 +117,27 @@ nav li {
 
 /* Sections */
 section {
-  @apply pt-16 lg:pt-20;
+  @apply pt-16 pb-28 lg:pt-20 lg:pb-32;
 }
 
 .section-children-container {
-  @apply p-8 flex justify-center items-center;
+  @apply p-8 flex justify-center items-center flex-col;
+}
+
+.objectives-container span {
+  @apply inline-block;
+  width: 50ch;
 }
 
 .projects-container {
   @apply flex;
   @apply flex-no-wrap;
   @apply overflow-x-auto;
+  @apply p-4;
+}
+
+.more-projects-link {
+  @apply mt-12;
 }
 
 .values-beliefs-container {
@@ -136,12 +152,40 @@ section {
   background-color: var(--primary-light);
 }
 
+.about-content-container {
+  @apply grid gap-x-64;
+  grid-template-columns: 1fr 1.3fr;
+}
+
+.about-description a {
+  @apply mt-12 mb-32;
+}
+
+.about-description p {
+  width: 27ch;
+  @apply text-xl;
+}
+
+.about-image-container { 
+  @apply grid grid-cols-3 gap-x-1;
+}
+
+
 .form-container {
   background-color: var(--primary-dark);
 }
 
-.form-container h2 {
-  color: var(--primary-light);
+.form-container h2, .partners-container h2 {
+  color: var(--primary-light-bleed);
+}
+
+.partners-container {
+  background-color: var(--background-color-3);
+}
+
+.partner {
+  background-color: var(--primary-1);
+  @apply inline-block p-4 mx-8;
 }
 
 /* MEDIA QUERIES */
@@ -152,3 +196,4 @@ section {
 }
 
 @import "./contact_form.css";
+@import "./animations.css";

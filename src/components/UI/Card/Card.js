@@ -5,9 +5,9 @@ import classes from "./Card.module.css"
 const Card = props => {
   const { title, body, link } = props
   return (
-    <div className={classes.Card} style={{ backgroundColor: "gray" }}>
+    <div className={classes.Card}>
       <div className={classes.ImgContainer}>
-        <img src="/" alt="Project Image here" />
+        <img src="/test.jpg" alt="Project Image here" />
       </div>
       <h3>{title}</h3>
       <p>{body}</p>

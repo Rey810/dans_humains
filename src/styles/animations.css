@@ -1,0 +1,22 @@
+/* About Section (3 grid image zoom) */
+.about-image-container .image-container {
+  @apply overflow-hidden;
+}
+
+.about-image-container .image-container div {
+    transition: transform .3s ease-in, transform .3s ease-in;
+    filter: grayscale(1);
+}
+
+
+.about-image-container .image-container:hover div {
+  transform: scale3d(1.1, 1.1, 1);
+  filter: none;
+}  
+
+
+/* Project Cards */
+.projects-container > div:hover {
+  @apply shadow-md;
+  transform: scale3d(1.01, 1.01, 1);
+}

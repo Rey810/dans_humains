@@ -3,9 +3,9 @@ import classes from "./Button.module.css"
 
 const Button = props => {
   // btnStyle defines the CSS styling
-  const { type, btnStyle, children } = props
+  const { type, btnStyle, children, extraClass } = props
 
-  let attachedClasses = [classes[btnStyle], classes.Button].join(" ")
+  let attachedClasses = [classes[btnStyle], extraClass, classes.Button].join(" ")
 
   let button = (
     <button className={attachedClasses} type={type}>

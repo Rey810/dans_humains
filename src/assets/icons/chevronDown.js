@@ -3,7 +3,7 @@ import classes from "../../animations/bounce.module.css"
 
 const chevronDown = () => {
   return (
-    <a href="/#values-and-beliefs" className={`inline-block ${classes.Bounce}`}>
+    <a href="/#first-child-section" className={`inline-block ${classes.Bounce}`}>
       <svg
         class="w-6 h-6 mt-6"
         fill="none"

@@ -106,6 +106,10 @@ textarea {
   transform: translateX(0%);
 }
 
+.Form input:invalid {
+  box-shadow: none;
+}
+
 /* TEXTAREA ONLY */
 .contact-form textarea {
   @apply my-8;
@@ -123,6 +127,10 @@ textarea {
 
 .contact-form textarea:valid {
   box-shadow: inset 0px 0px 1px 1px var(--success-color);
+}
+
+.Form textarea:invalid {
+  box-shadow: none;
 }
 
 .contact-form textarea {
