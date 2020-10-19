@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+import Img from "gatsby-image/withIEPolyfill"
 
 import Layout from "../containers/Layout"
 import Landing from "../containers/Landing/Landing"
@@ -28,8 +28,12 @@ const home = props => {
       <section className="latest-projects-container">
         <h2>Latest Projects</h2>
         <div className="section-children-container">
-          <Projects />
-          <Button extraClass="more-projects-link" type="link" btnStyle="PRIMARY_1">
+          <Projects testImage={props.data.test} />
+          <Button
+            extraClass="more-projects-link"
+            type="link"
+            btnStyle="PRIMARY_1"
+          >
             See More
           </Button>
         </div>
@@ -52,13 +56,22 @@ const home = props => {
             </div>
             <div className="about-image-container">
               <div className="image-container">
-                <Img fluid={props.data.val.childImageSharp.fluid} className="h-full"/>
+                <Img
+                  fluid={props.data.val.childImageSharp.fluid}
+                  className="h-full"
+                />
               </div>
               <div className="image-container">
-                <Img fluid={props.data.est.childImageSharp.fluid} className="h-full"/>
+                <Img
+                  fluid={props.data.est.childImageSharp.fluid}
+                  className="h-full"
+                />
               </div>
               <div className="image-container">
-                <Img fluid={props.data.xim.childImageSharp.fluid} className="h-full"/>
+                <Img
+                  fluid={props.data.xim.childImageSharp.fluid}
+                  className="h-full"
+                />
               </div>
             </div>
           </div>
@@ -74,9 +87,34 @@ const home = props => {
         <h2>Partners</h2>
         <div className="section-children-container">
           <div className="partners">
-            <div className="partner">Partner 1</div>
-            <div className="partner">Partner 2</div>
-            <div className="partner">Partner 3</div>
+            <div className="partner-container">
+              <Img
+                fluid={props.data.actionForBolivia.childImageSharp.fluid}
+                className="h-full"
+                objectFit="contain"
+              />
+            </div>
+            <div className="partner-container">
+              <Img
+                fluid={props.data.choreomundus.childImageSharp.fluid}
+                className="h-full"
+                objectFit="contain"
+              />
+            </div>
+            <div className="partner-container">
+              <Img
+                fluid={props.data.dakini.childImageSharp.fluid}
+                className="h-full"
+                objectFit="contain"
+              />
+            </div>
+            <div className="partner-container">
+              <Img
+                fluid={props.data.ramallah.childImageSharp.fluid}
+                className="h-full"
+                objectFit="contain"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -95,6 +133,15 @@ export const fluidImage = graphql`
     }
   }
 `
+export const smallFluidImage = graphql`
+  fragment smallFluidImage on File {
+    childImageSharp {
+      fluid(maxWidth: 200) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`
 
 export const pageQuery = graphql`
   query {
@@ -106,6 +153,21 @@ export const pageQuery = graphql`
     }
     xim: file(relativePath: { eq: "xim.jpg" }) {
       ...fluidImage
+    }
+    test: file(relativePath: { eq: "test.jpg" }) {
+      ...fluidImage
+    }
+    actionForBolivia: file(relativePath: { eq: "action_for_bolivia.jpeg" }) {
+      ...smallFluidImage
+    }
+    choreomundus: file(relativePath: { eq: "choreomundus.jpg" }) {
+      ...smallFluidImage
+    }
+    dakini: file(relativePath: { eq: "dakini.png" }) {
+      ...smallFluidImage
+    }
+    ramallah: file(relativePath: { eq: "ramallah.png" }) {
+      ...smallFluidImage
     }
   }
 `

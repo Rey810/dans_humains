@@ -1,13 +1,30 @@
 import React from "react"
 import Card from "../../components/UI/Card/Card"
 
-const Projects = () => {
+const Projects = props => {
+  const { testImage } = props
   return (
     <div className="projects-container">
-      <Card title="A Title" body="Some interesting text goes here! Some interesting text goes here! Some interesting text goes here! Some interesting text goes here!" />
-      <Card title="A Title" body="Some interesting text goes here!" />
-      <Card title="A Title" body="Some interesting text goes here! Some interesting text goes here! Some interesting text goes here! Some interesting text goes here!" />
-      <Card title="A Title" body="Some interesting text goes here!" />
+      <Card
+        headerImage={testImage}
+        title="A Title"
+        body="Some interesting text goes here! Some interesting text goes here! Some interesting text goes here! Some interesting text goes here!"
+      />
+      <Card
+        headerImage={testImage}
+        title="A Title"
+        body="Some interesting text goes here!"
+      />
+      <Card
+        headerImage={testImage}
+        title="A Title"
+        body="Some interesting text goes here! Some interesting text goes here! Some interesting text goes here! Some interesting text goes here!"
+      />
+      <Card
+        headerImage={testImage}
+        title="A Title"
+        body="Some interesting text goes here!"
+      />
     </div>
   )
 }

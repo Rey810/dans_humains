@@ -65,12 +65,12 @@
 html {
   font-family: Roboto;
   scroll-behavior: smooth;
+  color: var(--primary-dark-bleed);
 }
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
-    color: var(--primary-dark-bleed);
   }
 }
 
@@ -166,16 +166,16 @@ section {
   @apply text-xl;
 }
 
-.about-image-container { 
+.about-image-container {
   @apply grid grid-cols-3 gap-x-1;
 }
-
 
 .form-container {
   background-color: var(--primary-dark);
 }
 
-.form-container h2, .partners-container h2 {
+.form-container h2,
+.partners-container h2 {
   color: var(--primary-light-bleed);
 }
 
@@ -183,9 +183,10 @@ section {
   background-color: var(--background-color-3);
 }
 
-.partner {
-  background-color: var(--primary-1);
-  @apply inline-block p-4 mx-8;
+.partner-container {
+  @apply inline-block mx-8;
+  height: 5rem;
+  width: 10rem;
 }
 
 /* MEDIA QUERIES */

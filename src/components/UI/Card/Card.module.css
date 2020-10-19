@@ -6,6 +6,7 @@
   /* Prevents cards growing or shrinking within flex container */
   @apply flex-shrink-0 flex-grow-0 p-2 mx-2;
   background-color: var(--background-color-light-bleed);
+  cursor: pointer;
 }
 
 .Card h3 {
@@ -13,12 +14,15 @@
 }
 
 .ImgContainer {
-  @apply h-2/3;
+  @apply relative pb-2/3;
+}
+
+.ImgContainer > div {
+  position: absolute !important;
 }
 
 .ImgContainer img {
-  @apply h-full;
- background-color: #0000000f;
+  background-color: #0000000f;
 }
 
 .Card p {

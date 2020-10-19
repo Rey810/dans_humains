@@ -1,6 +1,11 @@
 /* Buttons */
 .Button {
   @apply px-6 py-2 inline-block;
+  transition: transform 0.15s ease-in;
+}
+
+.Button:active {
+  transform: scale3d(0.9, 0.9, 1);
 }
 
 .PRIMARY_1 {
