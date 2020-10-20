@@ -88,32 +88,32 @@ const home = props => {
         <div className="section-children-container">
           <div className="partners">
             <div className="partner-container">
-              <Img
+              <a href="/"><Img
                 fluid={props.data.actionForBolivia.childImageSharp.fluid}
                 className="h-full"
                 objectFit="contain"
-              />
+              /></a>
             </div>
             <div className="partner-container">
-              <Img
+              <a href="/"><Img
                 fluid={props.data.choreomundus.childImageSharp.fluid}
                 className="h-full"
                 objectFit="contain"
-              />
+              /></a>
             </div>
             <div className="partner-container">
-              <Img
+              <a href="/"><Img
                 fluid={props.data.dakini.childImageSharp.fluid}
                 className="h-full"
                 objectFit="contain"
-              />
+              /></a>
             </div>
             <div className="partner-container">
-              <Img
+              <a href="/"><Img
                 fluid={props.data.ramallah.childImageSharp.fluid}
                 className="h-full"
                 objectFit="contain"
-              />
+              /></a>
             </div>
           </div>
         </div>

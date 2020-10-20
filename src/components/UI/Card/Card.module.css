@@ -6,7 +6,6 @@
   /* Prevents cards growing or shrinking within flex container */
   @apply flex-shrink-0 flex-grow-0 p-2 mx-2;
   background-color: var(--background-color-light-bleed);
-  cursor: pointer;
 }
 
 .Card h3 {
@@ -26,9 +25,7 @@
 }
 
 .Card p {
-  @apply py-2 text-sm lg:text-base;
-  @apply h-20;
-  @apply overflow-hidden;
+  @apply py-2 text-sm h-20 overflow-hidden lg:text-base;
 }
 
 @media (min-width: 1027px) {

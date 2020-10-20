@@ -183,10 +183,15 @@ section {
   background-color: var(--background-color-3);
 }
 
+.partners {
+  @apply flex flex-col;
+}
+
 .partner-container {
   @apply inline-block mx-8;
   height: 5rem;
   width: 10rem;
+  @apply md:h-12 md:w-20;
 }
 
 /* MEDIA QUERIES */
